@@ -19,11 +19,7 @@ This script uses the **MusicLangPredictor** to generate a new musical score base
     - `midi2audio`
     - `FluidSynth` (with appropriate soundfont)
 
-You can install the required packages using pip:
 
-```bash
-pip install musiclang_predict music21 midi2audio
-```
 
 ## Creating a Virtual Environment
 
