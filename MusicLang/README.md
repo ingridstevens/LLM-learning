@@ -47,16 +47,13 @@ This project uses Homebrew to install FluidSynth. If you don't want to use Homeb
 
 To install FluidSynth, you can use the following commands:
 
-```bash
-brew install fluidsynth
-```
-
-If you need, install xcode command line tools:
+Install xcode command line tools:
     
 ```bash
 xcode-select --install
 ```
-Then, try to install FluidSynth again.
+
+Then, install FluidSynth.
 ```bash
 brew install fluidsynth
 ```
@@ -95,6 +92,8 @@ To run the app, ue the following command:
 ```bash
 python app.py
 ```
+
+Then, you can see your generated MIDI and audio files in the `outputs` folder.
 
 ### Settings
 
