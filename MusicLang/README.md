@@ -14,12 +14,27 @@ This script uses the **MusicLangPredictor** to generate a new musical score base
 
 - Python 3.x
 - Required packages:
-  - `musiclang_predict`
-  - `music21`
-  - `midi2audio`
-  - `FluidSynth` (with appropriate soundfont)
+    - `musiclang_predict`
+    - `music21`
+    - `midi2audio`
+    - `FluidSynth` (with appropriate soundfont)
 
 You can install the required packages using pip:
+
+```bash
+pip install musiclang_predict music21 midi2audio
+```
+
+## Creating a Virtual Environment
+
+It is recommended to create a virtual environment to manage dependencies. You can create and activate a virtual environment using the following commands:
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
+
+After activating the virtual environment, install the required packages:
 
 ```bash
 pip install musiclang_predict music21 midi2audio
@@ -85,3 +100,4 @@ Thanks to the following projects:
 
 - [MusicLangPredictor](https://github.com/your-repo/musiclang_predict) - for the music generation capabilities.
 - [FluidSynth](https://www.fluidsynth.org/) - for MIDI to audio conversion.
+
