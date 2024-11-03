@@ -27,7 +27,7 @@ It is recommended to create a virtual environment to manage dependencies. You ca
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+source venv/bin/activate
 ```
 
 After activating the virtual environment, install the required packages:
@@ -36,7 +36,65 @@ After activating the virtual environment, install the required packages:
 pip install musiclang_predict music21 midi2audio
 ```
 
+If yuo get an error about Numpy, try this: 
+
+```bash
+pip install --upgrade numpy pandas   
+```
+
+## Install FluidSynth
+This project uses Homebrew to install FluidSynth. If you don't want to use Homebrew, you can find an alternative way to install FluidSynth, for example https://ports.macports.org/port/fluidsynth/. However, this tutorial uses Homebrew.
+
+To install FluidSynth, you can use the following commands:
+
+```bash
+brew install fluidsynth
+```
+
+If you need, install xcode command line tools:
+    
+```bash
+xcode-select --install
+```
+Then, try to install FluidSynth again.
+```bash
+brew install fluidsynth
+```
+
+After installing FluidSynth, you need to download a soundfont file. You can download the FluidR3_GM.sf2 by following these directions to install the soundfont file:
+
+**Create the directory where the SoundFont will be stored**
+
+    mkdir -p "$HOME/soundfonts"
+
+**Change to the directory where you want to store the SoundFont**
+
+    cd "$HOME/soundfonts"
+
+**Download the FluidR3_GM.zip file from the provided URL**
+
+    curl -O https://keymusician01.s3.amazonaws.com/FluidR3_GM.zip
+
+**Unzip the downloaded file**
+
+    unzip FluidR3_GM.zip
+
+**Move the SoundFont file to the correct location (already in $HOME/soundfonts)**
+
+    mv FluidR3_GM.sf2 "$HOME/soundfonts/"
+
+**Clean up by removing the .zip file**
+
+    rm FluidR3_GM.zip
+
+
 ## Usage
+
+To run the app, ue the following command:
+
+```bash
+python app.py
+```
 
 ### Settings
 
